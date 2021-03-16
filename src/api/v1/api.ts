@@ -1,4 +1,4 @@
-import { fetchGet, fetchPost } from "./httpClient";
+import { fetchGet, fetchPost, fetchDelete } from "./httpClient";
 import { BASE_URL } from "../../validators/checkEnv"
 import { IBooks, IBook } from "../../graphql/resolvers/interfaces";
 
@@ -12,4 +12,7 @@ export const getBookById = (bookId: string): Promise<IBooks[]> =>
 
 export const createBook = (bookInfo: IBook): Promise<IBooks[]> => 
   fetchPost(`${BASE}/books`, bookInfo)
+
+export const deleteBook = (bookId: string): Promise<any> => 
+  fetchDelete(`${BASE}/books/${bookId}`)
 

@@ -6,29 +6,9 @@
       "author": "J. R. R. Tolkien"
     },
     {
-      "id": 2,
-      "title": "Book Two",
-      "author": "Author Two"
-    },
-    {
       "id": 3,
       "title": "Book Three",
       "author": "Author Three"
-    },
-    {
-      "method": "POST",
-      "data": "{\"id\":4,\"title\":\"Super Title\",\"author\":\"John Doe\"}",
-      "id": 4
-    },
-    {
-      "method": "POST",
-      "data": "{\"id\":4,\"title\":\"Super Title\",\"author\":\"John Doe\"}",
-      "id": 5
-    },
-    {
-      "method": "POST",
-      "data": "{\"id\":6,\"title\":\"Test Title 1\",\"author\":\"Test Author 1\"}",
-      "id": 6
     },
     {
       "method": "POST",
@@ -55,24 +35,6 @@
         "title": "Test Title 1",
         "author": "Test Author 1"
       },
-      "id": 9
-    },
-    {
-      "method": "POST",
-      "data": {
-        "id": 6,
-        "title": "Test Title 1",
-        "author": "Test Author 1"
-      },
-      "id": 10
-    },
-    {
-      "method": "POST",
-      "data": {
-        "id": 6,
-        "title": "Test Title 1",
-        "author": "Test Author 1"
-      },
       "id": 11
     },
     {
@@ -82,14 +44,6 @@
         "author": "John Doe"
       },
       "id": 12
-    },
-    {
-      "method": "POST",
-      "data": {
-        "title": "Super Title",
-        "author": "John Doe"
-      },
-      "id": 13
     },
     {
       "method": "POST",
@@ -183,6 +137,16 @@
       "title": "Test Title 1",
       "author": "Test Author 1",
       "id": 26
+    },
+    {
+      "title": "Test Title 1",
+      "author": "Test Author 1",
+      "id": 27
+    },
+    {
+      "title": "Test Title 1",
+      "author": "Test Author 1",
+      "id": 28
     }
   ]
 }

@@ -3,7 +3,7 @@ import { gql } from "apollo-server";
 export const typeDefs = gql`
   #Used for commenting in gql.
   type Book {
-    id: Int!
+    id: ID!
     title: String
     author: String
   }
@@ -14,6 +14,7 @@ export const typeDefs = gql`
   }
 
   type Mutation {
-    createBook(id: Int!, title: String, author: String): Book
+    createBook(id: ID!, title: String, author: String): Book
+    deleteBook(id: ID!): ID
   }
 `
