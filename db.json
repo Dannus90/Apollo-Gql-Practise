@@ -3,17 +3,17 @@
     {
       "id": 1,
       "title": "Lord of the Rings",
-      "author": "J. R. R. Tolkien",
+      "author": "J. R. R. Tolkien"
     },
     {
       "id": 2,
       "title": "Book Two",
-      "author": "Author Two",
+      "author": "Author Two"
     },
     {
       "id": 3,
       "title": "Book Three",
-      "author": "Author Three",
+      "author": "Author Three"
     }
   ]
 }
