@@ -2,11 +2,11 @@
   "name": "apollo-gql-practise",
   "version": "1.0.0",
   "description": "Apollo and gql practise",
-  "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "db-start": "json-server --port 3001 --watch db.json"
+    "dev": "ts-node-dev --respawn src/server.ts",
+    "db-start": "json-server --port 3001 --watch db.json",
+    "start": "npm run build && node dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -25,10 +25,15 @@
   "dependencies": {
     "apollo-server": "^2.21.1",
     "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
     "graphql": "^15.5.0",
-    "json-server": "^0.16.3"
+    "json-server": "^0.16.3",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@types/graphql": "^14.5.0",
+    "nodemon": "^2.0.7",
+    "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.3"
   }
 }

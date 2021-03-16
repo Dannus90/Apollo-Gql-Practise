@@ -1,8 +1,8 @@
-import axios from "axios"
-import { IBook } from "../../graphql/resolvers/interfaces"
+import axios, { AxiosResponse } from "axios"
+import { IBooks } from "../../graphql/resolvers/interfaces"
 
-export const fetchGet = (url): Promise<IBook[]> => {
+export const fetchGet = (url: string): Promise<IBooks[]> => {
   return axios.get(url, {
     "method": "GET"
-  })
+  }).then((res: AxiosResponse) => res.data)
 }

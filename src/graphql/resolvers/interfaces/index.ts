@@ -1,5 +1,6 @@
-import { IBook } from "./books"
+import { IBook, IBooks } from "./books"
 
 export {
-  IBook
+  IBook,
+  IBooks
 }

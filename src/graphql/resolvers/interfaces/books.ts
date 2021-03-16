@@ -4,5 +4,5 @@ export interface IBook {
 }
 
 export interface IBooks {
-  Books: IBook[]
+  Books: IBook[];
 }
