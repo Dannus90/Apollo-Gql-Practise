@@ -1,4 +1,4 @@
-import { bookResolver } from "./book-resolver";
+import { booksResolver } from "./book-resolver";
 
 
-export const rootResolver = [bookResolver]
+export const rootResolver = [booksResolver]
