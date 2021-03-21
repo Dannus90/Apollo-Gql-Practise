@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios"
 import { IBooks, IBook } from "../../graphql/resolvers/interfaces"
 
-export const fetchGet = (url: string): Promise<IBooks[]> => {
+export const fetchGet = (url: string) => {
   return axios.get(url).then((res: AxiosResponse) => res.data)
 }
 
