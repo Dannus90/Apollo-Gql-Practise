@@ -21,13 +21,18 @@ export const bookTypeDefs = gql`
     authorById: Author
   }
   
-  #Input types are sent as seen down below for example.
-  input addBookAuthorData {
+  input authorInput {
     name: String
   }
   
+  #Input types are sent as seen down below for example.
+  input addBookData {
+    title: String
+    author: authorInput
+  }
+  
   type Mutation {
-    addBook(title: String, author: addBookAuthorData): Book
+    addBook(bookData: addBookData): Book
     deleteBook(id: ID!): ID
   }
 `

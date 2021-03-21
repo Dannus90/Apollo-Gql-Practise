@@ -1,16 +1,27 @@
 import axios, { AxiosResponse } from "axios"
-import { IBooks, IBook } from "../../graphql/resolvers/interfaces"
+import { IBooks } from "../../graphql/resolvers/interfaces"
 
 export const fetchGet = (url: string) => {
   return axios.get(url).then((res: AxiosResponse) => res.data)
 }
 
-export const fetchPost = (url: string, data: IBook): Promise<IBooks[]> => {
-  return axios.post(url, {
-    title: data.title,
+interface IBookData {
+  bookData: {
+    title: string;
     author: {
-      name: data.author.name,
-      books: data.author.books
+      name: string;
+      books: {
+        title: string;
+      }
+    }
+  }
+}
+
+export const fetchPost = (url: string, data: IBookData): Promise<IBooks[]> => {
+  return axios.post(url, {
+    title: data.bookData.title,
+    author: {
+      name: data.bookData.author?.name,
     }
   }).then((res: AxiosResponse) => res.data)
 }
