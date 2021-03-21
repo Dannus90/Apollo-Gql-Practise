@@ -23,7 +23,7 @@ export const booksResolver = {
     }
   },
   Mutation: {
-    createBook: async (_: IBook, args: IBook): Promise<IBooks[] | any> => {
+    addBook: async (_: IBook, args: IBook): Promise<IBooks[] | any> => {
       try {
         const response = await createBook(args)          
         return response

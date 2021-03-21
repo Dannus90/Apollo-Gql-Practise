@@ -1,6 +1,8 @@
+import {IBook} from "./books";
+
 export interface IAuthor {
-    author: String;
-    title: String;
+    name: String;
+    books: IBook[];
 }
 
 export interface IAuthors {

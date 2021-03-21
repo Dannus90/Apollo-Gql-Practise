@@ -8,7 +8,10 @@ export const fetchGet = (url: string) => {
 export const fetchPost = (url: string, data: IBook): Promise<IBooks[]> => {
   return axios.post(url, {
     title: data.title,
-    author: data.author
+    author: {
+      name: data.author.name,
+      books: data.author.books
+    }
   }).then((res: AxiosResponse) => res.data)
 }
 

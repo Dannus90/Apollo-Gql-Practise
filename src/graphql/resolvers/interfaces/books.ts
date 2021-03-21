@@ -1,5 +1,7 @@
+import {IAuthor} from "./authors";
+
 export interface IBook {
-  author: String;
+  author: IAuthor;
   title: String;
 }
 
