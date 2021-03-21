@@ -35,7 +35,8 @@ export const booksResolver = {
 
       console.log("deleteBook Args", args)
       try {
-        await deleteBook(args.id)          
+        await deleteBook(args.id) 
+              
         return args.id
       } catch(error) {
         console.log(error)

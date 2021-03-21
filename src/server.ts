@@ -1,10 +1,11 @@
 
-import { ApolloServer } from "apollo-server"
-import { typeDefs } from "./graphql/type-defs/Book"
-import { rootResolver } from "./graphql/resolvers/root-resolver"
+import { ApolloServer } from "apollo-server";
+import { rootTypeDefs } from "./graphql/type-defs/root-type-defs";
+import { rootResolver } from "./graphql/resolvers/root-resolver";
+
 
 const apolloServer = new ApolloServer({
-  typeDefs,
+  typeDefs: rootTypeDefs,
   resolvers: rootResolver,
   introspection: true,
   playground: true,
