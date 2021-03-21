@@ -9,7 +9,9 @@ export const bookTypeDefs = gql`
   Typenames should use PascalCase. 
   Enum should use PascalCase.
   Enum values should use ALL_CAPS.
+  When making mutations -> Always return the data. 
   """
+  
   type Book {
     id: ID!
     title: String
@@ -41,6 +43,7 @@ export const bookTypeDefs = gql`
   
   type Mutation {
     addBook(bookData: addBookData): Book
+    updateBook(id: ID!, title: String): Book 
     deleteBook(id: ID!): ID
   }
 `
