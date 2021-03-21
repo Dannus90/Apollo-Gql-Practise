@@ -34,7 +34,20 @@ export const booksResolver = {
     updateBook: async(_: IBook, args: IBook): Promise<IBook | any> => {
       try {
         const response = await patchBook(args.id, args.title)
-        return response
+        // Hard coding stuff like there is no tomorrow.
+        const returnData = {
+          success: 200,
+          message: "All went well",
+          code: 1000,
+          book: {
+            id: response.id,
+            title: response.title,
+            author: {
+              name: response.author.name
+            }
+          }
+        }
+        return returnData
       } catch(error) {
         console.log(error)
       }

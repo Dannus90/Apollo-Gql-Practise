@@ -41,9 +41,22 @@ export const bookTypeDefs = gql`
     author: authorInput
   }
   
+  interface MutationResponse {
+    code: String
+    success: Boolean
+    message: String
+  }
+  
+  type UpdateBookTitleMutationsResponse implements MutationResponse {
+    code: String
+    success: Boolean
+    message: String
+    book: Book
+  }
+  
   type Mutation {
     addBook(bookData: addBookData): Book
-    updateBook(id: ID!, title: String): Book 
+    updateBook(id: ID!, title: String!): UpdateBookTitleMutationsResponse 
     deleteBook(id: ID!): ID
   }
 `
