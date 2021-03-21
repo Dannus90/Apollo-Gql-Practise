@@ -1,7 +1,15 @@
 import { gql } from "apollo-server";
 
 export const bookTypeDefs = gql`
-  #Used for commenting in gql.
+  #Used for commenting in gql. Single line.
+  """
+  Multiline comment.
+  Recommendations: 
+  camelCase for field names.
+  Typenames should use PascalCase. 
+  Enum should use PascalCase.
+  Enum values should use ALL_CAPS.
+  """
   type Book {
     id: ID!
     title: String
